@@ -16,13 +16,13 @@ public abstract class AbstractFlightTest {
     private static final Segment segment4 = new Segment(threeDaysFromNow, threeDaysFromNow.minusHours(6));
     private static final Segment segment5 = new Segment(threeDaysFromNow.plusHours(6), threeDaysFromNow.plusHours(7));
 
-    //A normal flight
+    //Обычный полет
     protected static final Flight flight1 = new Flight(Arrays.asList(segment1, segment2));
-    //A flight departing in the past
+    //Полет в прошлом
     protected static final Flight flight2 = new Flight(Collections.singletonList(segment3));
-    //A flight that arrives earlier than it left
+    //Полет прежде чем другой сегмент прилетел
     protected static final Flight flight3 = new Flight(Collections.singletonList(segment4));
-    //A flight with more than two hours ground time
+    //Полет со временем на земле более 2 часов
     protected static final Flight flight4 = new Flight(Arrays.asList(segment1, segment2, segment5));
 
     protected AbstractFlightTest(Filter filterTest) {
